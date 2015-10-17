@@ -22,7 +22,7 @@ class Component: NSObject {
     // Layout is struct, so we need to use var in order to allow it to be changed
     var style = StyleProps()
     
-    var children: [Component] = []
+    var children: [Component]?
     var isBuilt = false
     var view: NSView?
     
@@ -56,14 +56,16 @@ class Component: NSObject {
         addSizeConstraints()
         
         // Render all children components and append their views
-        children = render()
+        if children == nil {
+            children = render()
+        }
         
-        for child in children {
+        for child in children! {
             let childView = child.build()
             view!.addSubview(childView)
         }
         
-        let constraints = children.map { $0.constraints }.reduce([], combine: +)
+        let constraints = children!.map { $0.constraints }.reduce([], combine: +)
         addConstraints(constraints)
         
 //        print("Adding \(constraints.count) constraints to the view")
@@ -130,7 +132,7 @@ class Component: NSObject {
     // Sends view did appear to the entire Component tree
     // PERF: This might be slowing us down in the future
     func viewDidAppear() {
-        for child in children {
+        for child in children! {
             child.viewDidAppear()
         }        
     }

@@ -15,12 +15,7 @@ func delay(delay:Double, closure:()->()) {
 }
 
 class SplitView: Component, NSSplitViewDelegate {
-    let subviews: [Component]
     var sizeRanges: [Int:[CGFloat]] = [:]
-    
-    init(subviews: [Component]) {
-       self.subviews = subviews
-    }
     
     override func createView() -> NSView {
         let view = NSSplitView()
@@ -28,8 +23,8 @@ class SplitView: Component, NSSplitViewDelegate {
         view.dividerStyle = .Thin
         view.delegate = self
         
-        for subview in subviews {
-            view.addSubview(subview.build())
+        for child in children! {
+            view.addSubview(child.build())
         }
         
         return view

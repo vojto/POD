@@ -17,7 +17,8 @@ class MainComponent: Component {
         let main = Component()
         main.style.background = NSColor.whiteColor()
         
-        let split = SplitView(subviews: [sidebar, main])
+        let split = SplitView()
+        split.children = [sidebar, main]
         split.setSizeRange(0, range: [150, 300])
         
         // TODO: Come up with a nice oneliner for this
