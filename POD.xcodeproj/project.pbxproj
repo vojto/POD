@@ -26,6 +26,7 @@
 		994CB1631BD2BCDE00EF0120 /* ComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CB1441BD2BC1B00EF0120 /* ComponentSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997CCED01BD2AED000ED786E /* MainViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CCED21BD2AF4E00ED786E /* Controller.swift */; settings = {ASSET_TAGS = (); }; };
+		9997A9F91BD2E03300437AF9 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		994CB1601BD2BCC200EF0120 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		997CCED01BD2AED000ED786E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		997CCED21BD2AF4E00ED786E /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				99385FE31BD27F6300C677D1 /* Component.swift */,
 				99385FEA1BD2816000C677D1 /* Button.swift */,
 				99C942131BD28C4B00D478B4 /* SplitView.swift */,
+				9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
 				997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */,
 				99385FF61BD2824600C677D1 /* StyledView.swift in Sources */,
+				9997A9F91BD2E03300437AF9 /* VisualEffectView.swift in Sources */,
 				99385FED1BD2817B00C677D1 /* StyleProps.swift in Sources */,
 				99385FD51BD27F3500C677D1 /* AppDelegate.swift in Sources */,
 				99385FE41BD27F6300C677D1 /* Component.swift in Sources */,
@@ -537,6 +541,7 @@
 				994CB1531BD2BC8900EF0120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
