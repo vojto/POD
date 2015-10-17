@@ -18,13 +18,20 @@ struct Layout {
     let bottom = Edge(type: .Bottom)
 }
 
-class Component: NSObject {
+public class Component: NSObject {
     // Layout is struct, so we need to use var in order to allow it to be changed
     var style = StyleProps()
     
-    var children: [Component]?
     var isBuilt = false
-    var view: NSView?
+    var renderedView: NSView?
+    
+    var view: NSView {
+        get {
+            return renderedView!
+        }
+    }
+    
+    public var children: [Component]?
     
     var layout = Layout()
     
@@ -32,8 +39,10 @@ class Component: NSObject {
     
     var constraints: [Constraint] = []
     
-    override init() {
+    override public init() {
         super.init()
+        
+        self.children = render()
         
         // TODO: Find a nicer way to do this
         layout.left.component = self
@@ -42,27 +51,22 @@ class Component: NSObject {
         layout.bottom.component = self
     }
     
-    func build() -> NSView {
+    func createViews() -> NSView {
         // If component is already built, returns its view
-        if view != nil {
-            return view!
+        if renderedView != nil {
+            return renderedView!
         }
         
         // Create new view for this component
-        view = self.createView()
-        view!.translatesAutoresizingMaskIntoConstraints = false
+        renderedView = self.createView()
+        renderedView!.translatesAutoresizingMaskIntoConstraints = false
         
         // Add size constraints
         addSizeConstraints()
         
-        // Render all children components and append their views
-        if children == nil {
-            children = render()
-        }
-        
         for child in children! {
-            let childView = child.build()
-            view!.addSubview(childView)
+            let childView = child.createViews()
+            renderedView!.addSubview(childView)
         }
         
         let constraints = children!.map { $0.constraints }.reduce([], combine: +)
@@ -70,12 +74,10 @@ class Component: NSObject {
         
 //        print("Adding \(constraints.count) constraints to the view")
         
-        return view!
+        return renderedView!
     }
     
     func addSizeConstraints() {
-        let view = self.view!
-        
         if let width = layout.width {
             view.addConstraint(view, attribute: .Width, toView: nil, toAttribute: .NotAnAttribute, constant: CGFloat(width))
         }
@@ -90,11 +92,11 @@ class Component: NSObject {
         for constraint in constraints {
             // var attribute: NSLayoutAttribute?
             let fromEdge = constraint.fromEdge;
-            let fromView = fromEdge.component!.view!
+            let fromView = fromEdge.component!.view
             let toEdge = constraint.toEdge!;
-            let toView = toEdge.component!.view!
+            let toView = toEdge.component!.view
             
-            view!.addConstraint(toView, attribute: toEdge.attribute, toView: fromView, toAttribute: fromEdge.attribute, constant: CGFloat(constraint.constant))
+            view.addConstraint(toView, attribute: toEdge.attribute, toView: fromView, toAttribute: fromEdge.attribute, constant: CGFloat(constraint.constant))
         }
     }
     
@@ -110,18 +112,9 @@ class Component: NSObject {
         return view
     }
     
-    func render() -> [Component] {
+    public func render() -> [Component]? {
         return []
     }
-    
-    override var description: String {
-        let descriptions = self.render().map { $0.description }
-        
-        let children = descriptions.joinWithSeparator(", ")
-        
-        return "\(self.tag)[\(children)]"
-    }
-    
     
     // Managing constraints
     

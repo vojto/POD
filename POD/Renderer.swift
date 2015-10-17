@@ -20,7 +20,7 @@ class Renderer {
     }
     
     func render(component: Component, containerView: NSView) {
-        let view = component.build()
+        let view = component.createViews()
         
         containerView.addSubview(view)
         

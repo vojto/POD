@@ -19,11 +19,41 @@
 		99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF01BD281BD00C677D1 /* Constraint.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF61BD2824600C677D1 /* StyledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF51BD2824600C677D1 /* StyledView.swift */; settings = {ASSET_TAGS = (); }; };
+		994CB15D1BD2BCBA00EF0120 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CB15B1BD2BCBA00EF0120 /* Nimble.framework */; };
+		994CB15E1BD2BCBA00EF0120 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CB15C1BD2BCBA00EF0120 /* Quick.framework */; };
+		994CB1611BD2BCC200EF0120 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 994CB15F1BD2BCC200EF0120 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994CB1621BD2BCC200EF0120 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 994CB1601BD2BCC200EF0120 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994CB1631BD2BCDE00EF0120 /* ComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CB1441BD2BC1B00EF0120 /* ComponentSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997CCED01BD2AED000ED786E /* MainViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CCED21BD2AF4E00ED786E /* Controller.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		994CB14F1BD2BC8900EF0120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99385FC91BD27F3500C677D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99385FD01BD27F3500C677D1;
+			remoteInfo = POD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		994CB1561BD2BC9F00EF0120 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				994CB1611BD2BCC200EF0120 /* Nimble.framework in Copy Files */,
+				994CB1621BD2BCC200EF0120 /* Quick.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		99385FD11BD27F3500C677D1 /* POD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +70,13 @@
 		99385FF01BD281BD00C677D1 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
 		99385FF51BD2824600C677D1 /* StyledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledView.swift; sourceTree = "<group>"; };
+		994CB1441BD2BC1B00EF0120 /* ComponentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentSpec.swift; sourceTree = "<group>"; };
+		994CB14A1BD2BC8900EF0120 /* PODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		994CB14E1BD2BC8900EF0120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994CB15B1BD2BCBA00EF0120 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		994CB15C1BD2BCBA00EF0120 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		994CB15F1BD2BCC200EF0120 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		994CB1601BD2BCC200EF0120 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		997CCED01BD2AED000ED786E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		997CCED21BD2AF4E00ED786E /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
@@ -54,13 +91,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		994CB1471BD2BC8900EF0120 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994CB15D1BD2BCBA00EF0120 /* Nimble.framework in Frameworks */,
+				994CB15E1BD2BCBA00EF0120 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		99385FC81BD27F3500C677D1 = {
 			isa = PBXGroup;
 			children = (
+				994CB15F1BD2BCC200EF0120 /* Nimble.framework */,
+				994CB1601BD2BCC200EF0120 /* Quick.framework */,
+				994CB15B1BD2BCBA00EF0120 /* Nimble.framework */,
+				994CB15C1BD2BCBA00EF0120 /* Quick.framework */,
 				99385FD31BD27F3500C677D1 /* POD */,
+				994CB14B1BD2BC8900EF0120 /* PODTests */,
 				99385FD21BD27F3500C677D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				99385FD11BD27F3500C677D1 /* POD.app */,
+				994CB14A1BD2BC8900EF0120 /* PODTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +154,7 @@
 				99385FE91BD2815600C677D1 /* Components */,
 				99385FF71BD2824F00C677D1 /* Styling */,
 				99385FF21BD281C300C677D1 /* Layout */,
+				994CB1431BD2BBFB00EF0120 /* Tests */,
 			);
 			name = ComponentKit;
 			sourceTree = "<group>";
@@ -145,6 +198,22 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		994CB1431BD2BBFB00EF0120 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				994CB1441BD2BC1B00EF0120 /* ComponentSpec.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		994CB14B1BD2BC8900EF0120 /* PODTests */ = {
+			isa = PBXGroup;
+			children = (
+				994CB14E1BD2BC8900EF0120 /* Info.plist */,
+			);
+			path = PODTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +234,25 @@
 			productReference = 99385FD11BD27F3500C677D1 /* POD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		994CB1491BD2BC8900EF0120 /* PODTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 994CB1511BD2BC8900EF0120 /* Build configuration list for PBXNativeTarget "PODTests" */;
+			buildPhases = (
+				994CB1461BD2BC8900EF0120 /* Sources */,
+				994CB1471BD2BC8900EF0120 /* Frameworks */,
+				994CB1481BD2BC8900EF0120 /* Resources */,
+				994CB1561BD2BC9F00EF0120 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				994CB1501BD2BC8900EF0120 /* PBXTargetDependency */,
+			);
+			name = PODTests;
+			productName = PODTests;
+			productReference = 994CB14A1BD2BC8900EF0120 /* PODTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +264,10 @@
 				TargetAttributes = {
 					99385FD01BD27F3500C677D1 = {
 						CreatedOnToolsVersion = 7.0.1;
+					};
+					994CB1491BD2BC8900EF0120 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 99385FD01BD27F3500C677D1;
 					};
 				};
 			};
@@ -193,6 +285,7 @@
 			projectRoot = "";
 			targets = (
 				99385FD01BD27F3500C677D1 /* POD */,
+				994CB1491BD2BC8900EF0120 /* PODTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +298,13 @@
 				99385FD71BD27F3500C677D1 /* Assets.xcassets in Resources */,
 				997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */,
 				99385FDA1BD27F3500C677D1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		994CB1481BD2BC8900EF0120 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +331,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		994CB1461BD2BC8900EF0120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994CB1631BD2BCDE00EF0120 /* ComponentSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		994CB1501BD2BC8900EF0120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99385FD01BD27F3500C677D1 /* POD */;
+			targetProxy = 994CB14F1BD2BC8900EF0120 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		99385FD81BD27F3500C677D1 /* MainMenu.xib */ = {
@@ -330,6 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = POD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rinik.POD;
@@ -342,10 +463,49 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = POD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rinik.POD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		994CB1521BD2BC8900EF0120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = PODTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rinik.PODTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POD.app/Contents/MacOS/POD";
+			};
+			name = Debug;
+		};
+		994CB1531BD2BC8900EF0120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = PODTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rinik.PODTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POD.app/Contents/MacOS/POD";
 			};
 			name = Release;
 		};
@@ -369,6 +529,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		994CB1511BD2BC8900EF0120 /* Build configuration list for PBXNativeTarget "PODTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				994CB1521BD2BC8900EF0120 /* Debug */,
+				994CB1531BD2BC8900EF0120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

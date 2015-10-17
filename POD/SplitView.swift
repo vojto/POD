@@ -18,13 +18,15 @@ class SplitView: Component, NSSplitViewDelegate {
     var sizeRanges: [Int:[CGFloat]] = [:]
     
     override func createView() -> NSView {
+        print("Creating view for SplitView")
+        
         let view = NSSplitView()
         view.vertical = true
         view.dividerStyle = .Thin
         view.delegate = self
         
         for child in children! {
-            view.addSubview(child.build())
+            view.addSubview(child.createView())
         }
         
         return view

@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 class MainComponent: Component {
-    override func render() -> [Component] {
+    override func render() -> [Component]? {
         let sidebar = Component()
         sidebar.style.background = NSColor.fromHex("f0f0f4")
         
