@@ -25,11 +25,16 @@ class SplitView: Component, NSSplitViewDelegate {
         view.dividerStyle = .Thin
         view.delegate = self
         
-        for child in children! {
-            view.addSubview(child.build())
-        }
-        
         return view
+    }
+    
+    override func didBuild() {
+        // Did build
+        print("Did build")
+        
+        for child in children! {
+            view.addSubview(child.view)
+        }
     }
     
     func setSizeRange(viewIndex: Int, range: [CGFloat]) {
@@ -56,8 +61,11 @@ class SplitView: Component, NSSplitViewDelegate {
     override func viewDidAppear() {
         // Not calling super because SplitView doesn't have any children
         // TODO: It actually _should_ have children
+
         
-        (view as! NSSplitView).setPosition(150, ofDividerAtIndex: 0)
+        delay(0.01) {
+            (self.view as! NSSplitView).setPosition(150, ofDividerAtIndex: 0)
+        }
         
     }
 }

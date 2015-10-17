@@ -72,9 +72,15 @@ public class Component: NSObject {
         let constraints = children!.map { $0.constraints }.reduce([], combine: +)
         addConstraints(constraints)
         
+        self.didBuild()
+        
 //        print("Adding \(constraints.count) constraints to the view")
         
         return renderedView!
+    }
+    
+    func didBuild() {
+        
     }
     
     func addSizeConstraints() {
