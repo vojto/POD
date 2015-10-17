@@ -8,6 +8,16 @@
 
 import Cocoa
 
+struct Layout {
+    var width: Int? = nil
+    var height: Int? = nil
+    
+    let left = Edge(type: .Left)
+    let right = Edge(type: .Right)
+    let top = Edge(type: .Top)
+    let bottom = Edge(type: .Bottom)
+}
+
 class Component: NSObject {
     // Layout is struct, so we need to use var in order to allow it to be changed
     var style = StyleProps()
@@ -16,24 +26,20 @@ class Component: NSObject {
     var isBuilt = false
     var view: NSView?
     
-    var width: Int? = nil
-    var height: Int? = nil
+    var layout = Layout()
     
     var tag: String?
-    
-    let left = Edge(type: .Left)
-    let right = Edge(type: .Right)
-    let top = Edge(type: .Top)
-    let bottom = Edge(type: .Bottom)
     
     var constraints: [Constraint] = []
     
     override init() {
         super.init()
         
-        for e in [left, right, top, bottom] {
-            e.component = self
-        }
+        // TODO: Find a nicer way to do this
+        layout.left.component = self
+        layout.right.component = self
+        layout.top.component = self
+        layout.bottom.component = self
     }
     
     func build() -> NSView {
@@ -68,11 +74,11 @@ class Component: NSObject {
     func addSizeConstraints() {
         let view = self.view!
         
-        if let width = width {
+        if let width = layout.width {
             view.addConstraint(view, attribute: .Width, toView: nil, toAttribute: .NotAnAttribute, constant: CGFloat(width))
         }
         
-        if let height = height {
+        if let height = layout.height {
             view.addConstraint(view, attribute: .Height, toView: nil, toAttribute: .NotAnAttribute, constant: CGFloat(height))
         }
     }

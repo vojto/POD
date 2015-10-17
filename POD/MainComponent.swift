@@ -11,23 +11,23 @@ import Foundation
 class MainComponent: Component {
     override func render() -> [Component] {
         let upButton = Button(title: "Up")
-        upButton.width = 100
-        upButton.height = 20
+        upButton.layout.width = 100
+        upButton.layout.height = 20
         upButton.tag = "UpButton"
         
-        upButton.left <- left + 20
-        upButton.top <- top + 20
-        upButton.bottom <- bottom - 20
+        upButton.layout.left <- layout.left + 20
+        upButton.layout.top <- layout.top + 20
+        upButton.layout.bottom <- layout.bottom - 20
         
         let downButton = Button(title: "Down")
-        downButton.width = 100
-        downButton.height = 20
+        downButton.layout.width = 100
+        downButton.layout.height = 20
         downButton.tag = "DownButton"
         
-        downButton.left <- upButton.right + 20
-        downButton.top <- top + 20
-        downButton.bottom <- bottom - 20
-        downButton.right <- right - 20
+        downButton.layout.left <- upButton.layout.right + 20
+        downButton.layout.top <- layout.top + 20
+        downButton.layout.bottom <- layout.bottom - 20
+        downButton.layout.right <- layout.right - 20
         
         return [upButton, downButton]
     }

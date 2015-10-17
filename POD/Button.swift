@@ -18,7 +18,9 @@ class Button: Component {
     
     override func createView() -> NSView {
         let view = NSButton()
-        view.title = "test"
+        if let title = title {
+            view.title = title
+        }
         return view
     }
 }
