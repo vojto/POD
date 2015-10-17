@@ -56,7 +56,7 @@ class Component: NSObject {
         addSizeConstraints()
         
         // Render all children components and append their views
-        let children = render()
+        children = render()
         
         for child in children {
             let childView = child.build()
@@ -126,4 +126,21 @@ class Component: NSObject {
     func addConstraint(constraint: Constraint) {
         constraints.append(constraint)
     }
+    
+    // Sends view did appear to the entire Component tree
+    // PERF: This might be slowing us down in the future
+    func viewDidAppear() {
+        for child in children {
+            child.viewDidAppear()
+        }        
+    }
+    
 }
+
+
+
+
+
+
+
+

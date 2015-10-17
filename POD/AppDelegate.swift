@@ -15,14 +15,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let main = MainComponent()
-        Renderer.render(main, containerView: window.contentView!)
+        let controller = Controller()
+        controller.rootComponent = MainComponent()
+        window.contentView = controller.view
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
 
     }
-
-
 }
+
 

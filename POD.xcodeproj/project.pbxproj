@@ -19,6 +19,8 @@
 		99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF01BD281BD00C677D1 /* Constraint.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF61BD2824600C677D1 /* StyledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF51BD2824600C677D1 /* StyledView.swift */; settings = {ASSET_TAGS = (); }; };
+		997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997CCED01BD2AED000ED786E /* MainViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CCED21BD2AF4E00ED786E /* Controller.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		99385FF01BD281BD00C677D1 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
 		99385FF51BD2824600C677D1 /* StyledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledView.swift; sourceTree = "<group>"; };
+		997CCED01BD2AED000ED786E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		997CCED21BD2AF4E00ED786E /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 				99385FD61BD27F3500C677D1 /* Assets.xcassets */,
 				99385FD81BD27F3500C677D1 /* MainMenu.xib */,
 				99385FDB1BD27F3500C677D1 /* Info.plist */,
+				997CCED01BD2AED000ED786E /* MainViewController.xib */,
 			);
 			path = POD;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				99385FE71BD27F9800C677D1 /* Renderer.swift */,
+				997CCED21BD2AF4E00ED786E /* Controller.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99385FD71BD27F3500C677D1 /* Assets.xcassets in Resources */,
+				997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */,
 				99385FDA1BD27F3500C677D1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +222,7 @@
 				99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */,
 				99385FE81BD27F9800C677D1 /* Renderer.swift in Sources */,
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
+				997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */,
 				99385FF61BD2824600C677D1 /* StyledView.swift in Sources */,
 				99385FED1BD2817B00C677D1 /* StyleProps.swift in Sources */,
 				99385FD51BD27F3500C677D1 /* AppDelegate.swift in Sources */,
