@@ -26,7 +26,7 @@ class SplitView: Component, NSSplitViewDelegate {
         view.delegate = self
         
         for child in children! {
-            view.addSubview(child.createView())
+            view.addSubview(child.build())
         }
         
         return view

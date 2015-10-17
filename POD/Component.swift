@@ -51,7 +51,7 @@ public class Component: NSObject {
         layout.bottom.component = self
     }
     
-    func createViews() -> NSView {
+    func build() -> NSView {
         // If component is already built, returns its view
         if renderedView != nil {
             return renderedView!
@@ -65,7 +65,7 @@ public class Component: NSObject {
         addSizeConstraints()
         
         for child in children! {
-            let childView = child.createViews()
+            let childView = child.build()
             renderedView!.addSubview(childView)
         }
         
