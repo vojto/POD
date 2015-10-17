@@ -19,6 +19,8 @@
 		99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF01BD281BD00C677D1 /* Constraint.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF61BD2824600C677D1 /* StyledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF51BD2824600C677D1 /* StyledView.swift */; settings = {ASSET_TAGS = (); }; };
+		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
+		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		99385FF01BD281BD00C677D1 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
 		99385FF51BD2824600C677D1 /* StyledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledView.swift; sourceTree = "<group>"; };
+		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
+		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			children = (
 				99385FE31BD27F6300C677D1 /* Component.swift */,
 				99385FEA1BD2816000C677D1 /* Button.swift */,
+				99C942131BD28C4B00D478B4 /* SplitView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				99385FF51BD2824600C677D1 /* StyledView.swift */,
 				99385FEC1BD2817B00C677D1 /* StyleProps.swift */,
 				99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */,
+				99C942151BD290A300D478B4 /* NSColor+Extensions.swift */,
 			);
 			name = Styling;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 			files = (
 				99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */,
 				99385FEB1BD2816000C677D1 /* Button.swift in Sources */,
+				99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */,
 				99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */,
+				99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */,
 				99385FE81BD27F9800C677D1 /* Renderer.swift in Sources */,
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
 				99385FF61BD2824600C677D1 /* StyledView.swift in Sources */,
@@ -352,6 +360,7 @@
 				99385FE01BD27F3500C677D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

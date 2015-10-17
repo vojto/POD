@@ -7,28 +7,25 @@
 //
 
 import Foundation
+import Cocoa
 
 class MainComponent: Component {
     override func render() -> [Component] {
-        let upButton = Button(title: "Up")
-        upButton.layout.width = 100
-        upButton.layout.height = 20
-        upButton.tag = "UpButton"
+        let sidebar = Component()
+        sidebar.style.background = NSColor.fromHex("f0f0f4")
         
-        upButton.layout.left <- layout.left + 20
-        upButton.layout.top <- layout.top + 20
-        upButton.layout.bottom <- layout.bottom - 20
+        let main = Component()
+        main.style.background = NSColor.whiteColor()
         
-        let downButton = Button(title: "Down")
-        downButton.layout.width = 100
-        downButton.layout.height = 20
-        downButton.tag = "DownButton"
+        let split = SplitView(subviews: [sidebar, main])
+        split.setSizeRange(0, range: [150, 300])
         
-        downButton.layout.left <- upButton.layout.right + 20
-        downButton.layout.top <- layout.top + 20
-        downButton.layout.bottom <- layout.bottom - 20
-        downButton.layout.right <- layout.right - 20
+        // TODO: Come up with a nice oneliner for this
+        split.layout.left <- layout.left
+        split.layout.right <- layout.right
+        split.layout.top <- layout.top
+        split.layout.bottom <- layout.bottom
         
-        return [upButton, downButton]
+        return [split]
     }
 }

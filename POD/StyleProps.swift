@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import Cocoa
 
 struct StyleProps {
-    var background: String? = nil
+    var background: NSColor? = nil
 }

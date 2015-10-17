@@ -99,7 +99,13 @@ class Component: NSObject {
     // Returns view for this component. Subclass may override this
     // method to use different view.
     func createView() -> NSView {
-        return StyledView()
+        let view = StyledView()
+        
+        if let background = style.background {
+            view.background = background
+        }
+        
+        return view
     }
     
     func render() -> [Component] {

@@ -10,8 +10,15 @@ import Foundation
 import Cocoa
 
 class StyledView: NSView {
+    var background: NSColor?
+    
     override func drawRect(dirtyRect: NSRect) {
-        NSColor.whiteColor().set()
+        if let b = background {
+            b.set()
+        } else {
+            NSColor.whiteColor().set()
+        }
+        
         NSRectFill(self.bounds)
     }
 }
