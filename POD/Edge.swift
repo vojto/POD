@@ -56,6 +56,13 @@ func <- (left: Edge, var right: Constraint) {
     left.component!.addConstraint(right)
 }
 
+func <- (layout1: Layout, layout2: Layout) {
+    layout1.left <- layout2.left
+    layout1.right <- layout2.right
+    layout1.top <- layout2.top
+    layout1.bottom <- layout2.bottom
+}
+
 func + (left: Edge, right: Int) -> Constraint {
     return Constraint(toEdge: nil, fromEdge: left, constant: right)
 }

@@ -8,15 +8,7 @@
 
 import Cocoa
 
-struct Layout {
-    var width: Int? = nil
-    var height: Int? = nil
-    
-    let left = Edge(type: .Left)
-    let right = Edge(type: .Right)
-    let top = Edge(type: .Top)
-    let bottom = Edge(type: .Bottom)
-}
+
 
 public class Component: NSObject {
     // Layout is struct, so we need to use var in order to allow it to be changed

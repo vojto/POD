@@ -27,6 +27,8 @@
 		997CCED11BD2AED000ED786E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997CCED01BD2AED000ED786E /* MainViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CCED21BD2AF4E00ED786E /* Controller.swift */; settings = {ASSET_TAGS = (); }; };
 		9997A9F91BD2E03300437AF9 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */; settings = {ASSET_TAGS = (); }; };
+		9997A9FB1BD2E1D000437AF9 /* TableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9FA1BD2E1D000437AF9 /* TableComponent.swift */; settings = {ASSET_TAGS = (); }; };
+		9997A9FD1BD2E2A000437AF9 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9FC1BD2E2A000437AF9 /* Layout.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		997CCED01BD2AED000ED786E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		997CCED21BD2AF4E00ED786E /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		9997A9FA1BD2E1D000437AF9 /* TableComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableComponent.swift; sourceTree = "<group>"; };
+		9997A9FC1BD2E2A000437AF9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +172,7 @@
 				99385FEA1BD2816000C677D1 /* Button.swift */,
 				99C942131BD28C4B00D478B4 /* SplitView.swift */,
 				9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */,
+				9997A9FA1BD2E1D000437AF9 /* TableComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			children = (
 				99385FEE1BD2819200C677D1 /* Edge.swift */,
 				99385FF01BD281BD00C677D1 /* Constraint.swift */,
+				9997A9FC1BD2E2A000437AF9 /* Layout.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -321,7 +327,9 @@
 				99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */,
 				99385FEB1BD2816000C677D1 /* Button.swift in Sources */,
 				99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */,
+				9997A9FB1BD2E1D000437AF9 /* TableComponent.swift in Sources */,
 				99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */,
+				9997A9FD1BD2E2A000437AF9 /* Layout.swift in Sources */,
 				99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */,
 				99385FE81BD27F9800C677D1 /* Renderer.swift in Sources */,
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
