@@ -19,6 +19,8 @@
 		99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF01BD281BD00C677D1 /* Constraint.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FF61BD2824600C677D1 /* StyledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FF51BD2824600C677D1 /* StyledView.swift */; settings = {ASSET_TAGS = (); }; };
+		9947A5FF1BD5DDC800CC7D2F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A5FE1BD5DDC800CC7D2F /* Label.swift */; settings = {ASSET_TAGS = (); }; };
+		9947A6011BD5DEED00CC7D2F /* TableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A6001BD5DEED00CC7D2F /* TableItem.swift */; settings = {ASSET_TAGS = (); }; };
 		994CB15D1BD2BCBA00EF0120 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CB15B1BD2BCBA00EF0120 /* Nimble.framework */; };
 		994CB15E1BD2BCBA00EF0120 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CB15C1BD2BCBA00EF0120 /* Quick.framework */; };
 		994CB1611BD2BCC200EF0120 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 994CB15F1BD2BCC200EF0120 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,6 +75,8 @@
 		99385FF01BD281BD00C677D1 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
 		99385FF51BD2824600C677D1 /* StyledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledView.swift; sourceTree = "<group>"; };
+		9947A5FE1BD5DDC800CC7D2F /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		9947A6001BD5DEED00CC7D2F /* TableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableItem.swift; sourceTree = "<group>"; };
 		994CB1441BD2BC1B00EF0120 /* ComponentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentSpec.swift; sourceTree = "<group>"; };
 		994CB14A1BD2BC8900EF0120 /* PODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		994CB14E1BD2BC8900EF0120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				99C942131BD28C4B00D478B4 /* SplitView.swift */,
 				9997A9F81BD2E03300437AF9 /* VisualEffectView.swift */,
 				9997A9FA1BD2E1D000437AF9 /* TableComponent.swift */,
+				9947A6001BD5DEED00CC7D2F /* TableItem.swift */,
+				9947A5FE1BD5DDC800CC7D2F /* Label.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				99385FF41BD2822F00C677D1 /* NSView+Extensions.swift in Sources */,
 				9997A9FD1BD2E2A000437AF9 /* Layout.swift in Sources */,
 				99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */,
+				9947A6011BD5DEED00CC7D2F /* TableItem.swift in Sources */,
 				99385FE81BD27F9800C677D1 /* Renderer.swift in Sources */,
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
 				997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */,
@@ -338,6 +345,7 @@
 				9997A9F91BD2E03300437AF9 /* VisualEffectView.swift in Sources */,
 				99385FED1BD2817B00C677D1 /* StyleProps.swift in Sources */,
 				99385FD51BD27F3500C677D1 /* AppDelegate.swift in Sources */,
+				9947A5FF1BD5DDC800CC7D2F /* Label.swift in Sources */,
 				99385FE41BD27F6300C677D1 /* Component.swift in Sources */,
 				99385FE61BD27F8100C677D1 /* MainComponent.swift in Sources */,
 			);

@@ -50,7 +50,7 @@ class Sidebar: Component {
     }
 }
 
-class SidebarItem: Component {
+class SidebarItem: TableItem {
     override func render() -> [Component]? {
         let label = Label(label: "Hello")
         
@@ -60,20 +60,3 @@ class SidebarItem: Component {
     }
 }
 
-class Label: Component {
-    let label: String
-    
-    init(label: String) {
-        self.label = label
-    }
-    
-    override func createView() -> NSView {
-        let field = NSTextField()
-        field.stringValue = label
-        field.editable = false
-        field.selectable = false
-        field.bordered = false
-        field.backgroundColor = NSColor.clearColor()
-        return field
-    }
-}
