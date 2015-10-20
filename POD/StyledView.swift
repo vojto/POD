@@ -15,10 +15,7 @@ class StyledView: NSView {
     override func drawRect(dirtyRect: NSRect) {
         if let b = background {
             b.set()
-        } else {
-            NSColor.whiteColor().set()
+            NSRectFill(self.bounds)
         }
-        
-        NSRectFill(self.bounds)
     }
 }

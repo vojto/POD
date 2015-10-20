@@ -11,7 +11,7 @@ import Cocoa
 
 class MainComponent: Component {
     override func render() -> [Component]? {
-        let sidebar = SidebarComponent()
+        let sidebar = Sidebar()
         sidebar.style.background = NSColor.fromHex("f0f0f4")
         sidebar.tag = "sidebar"
         
@@ -29,12 +29,51 @@ class MainComponent: Component {
     }
 }
 
-class SidebarComponent: Component {
+class Sidebar: Component {
     override func render() -> [Component]? {
         let table = TableComponent()
         
         table.layout <- layout
+        table.numberOfRows = numberOfRows
+        table.componentAtRow = componentAtRow
         
         return [table]
+    }
+    
+    func numberOfRows() -> Int {
+        return 4
+    }
+    
+    func componentAtRow() -> Component {
+        let comp = SidebarItem()
+        return comp
+    }
+}
+
+class SidebarItem: Component {
+    override func render() -> [Component]? {
+        let label = Label(label: "Hello")
+        
+        label.layout <- layout
+        
+        return [label]
+    }
+}
+
+class Label: Component {
+    let label: String
+    
+    init(label: String) {
+        self.label = label
+    }
+    
+    override func createView() -> NSView {
+        let field = NSTextField()
+        field.stringValue = label
+        field.editable = false
+        field.selectable = false
+        field.bordered = false
+        field.backgroundColor = NSColor.clearColor()
+        return field
     }
 }

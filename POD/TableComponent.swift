@@ -10,6 +10,10 @@ import Foundation
 import Cocoa
 
 class TableComponent: Component, NSTableViewDelegate, NSTableViewDataSource {
+    
+    var numberOfRows: (() -> Int)?
+    var componentAtRow: (() -> Component)?
+    
     override func createView() -> NSView {
         let scrollView = NSScrollView.init()
         let tableView = NSTableView.init()
@@ -34,10 +38,24 @@ class TableComponent: Component, NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return 4
+        if let fun = numberOfRows {
+            return fun()
+        } else {
+            return 0
+        }
     }
     
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        if let fun = componentAtRow {
+            return fun().build()
+        } else {
+            return nil
+        }
+    }
+    
+    /*
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
         return "ahoj"
     }
+    */
 }
