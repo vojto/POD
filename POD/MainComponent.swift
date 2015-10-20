@@ -33,6 +33,8 @@ class SidebarComponent: Component {
     override func render() -> [Component]? {
         let table = TableComponent()
         
+        table.layout <- layout
+        
         return [table]
     }
 }
