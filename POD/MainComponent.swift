@@ -31,28 +31,23 @@ class MainComponent: Component {
 
 class Sidebar: Component {
     override func render() -> [Component]? {
-        let table = TableComponent()
+        let table = Table()
         
         table.layout <- layout
-        table.numberOfRows = numberOfRows
-        table.componentAtRow = componentAtRow
+//        table.numberOfRows = numberOfRows
+//        table.componentAtRow = componentAtRow
+        table.items = ["Nedela", "Pondelok", "Utorok", "..."]
+        table.itemComponent = SidebarItem.self
         
         return [table]
-    }
-    
-    func numberOfRows() -> Int {
-        return 4
-    }
-    
-    func componentAtRow() -> Component {
-        let comp = SidebarItem()
-        return comp
     }
 }
 
 class SidebarItem: TableItem {
     override func render() -> [Component]? {
-        let label = Label(label: "Hello")
+        let text = item as! String
+        
+        let label = Label(label: text)
         
         label.layout <- layout
         

@@ -10,6 +10,12 @@ import Foundation
 import Cocoa
 
 class TableItem: Component {
+    var item: AnyObject? = nil
+    
+    required init(item: AnyObject) {
+        self.item = item
+    }
+    
     override func createView() -> NSView {
         return NSTableCellView()
     }

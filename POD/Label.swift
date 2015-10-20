@@ -9,16 +9,18 @@
 import Foundation
 import Cocoa
 
-class Label: Component {
-    let label: String
+public class Label: Component {
+    var label: String? = nil
     
-    init(label: String) {
+    public init(label: String) {
         self.label = label
     }
     
     override func createView() -> NSView {
         let field = NSTextField()
-        field.stringValue = label
+        if label != nil {
+            field.stringValue = label!
+        }
         field.editable = false
         field.selectable = false
         field.bordered = false

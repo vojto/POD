@@ -9,13 +9,13 @@
 import Foundation
 import Cocoa
 
-class Button: Component {
+public class Button: Component {
     let title: String?
     
     init(title: String? = nil) {
         self.title = title
     }
-    
+
     override func createView() -> NSView {
         let view = NSButton()
         if let title = title {
