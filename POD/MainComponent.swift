@@ -36,7 +36,11 @@ class Sidebar: Component {
         table.layout <- layout
 //        table.numberOfRows = numberOfRows
 //        table.componentAtRow = componentAtRow
-        table.items = ["Nedela", "Pondelok", "Utorok", "..."]
+        
+        let days = DatesManager.currentWeekDates()
+        
+        table.items = days
+        
         table.itemComponent = SidebarItem.self
         
         return [table]
@@ -45,9 +49,16 @@ class Sidebar: Component {
 
 class SidebarItem: TableItem {
     override func render() -> [Component]? {
-        let text = item as! String
+        let date = item as! NSDate
+        let text = date.format("E, MMM dd")
+//        let isToday = (date.format("yyyy-MM-dd") == NSDate().format("yyyy-MM-dd")
+        let isToday = date.isSameDayAs(NSDate())
         
         let label = Label(label: text)
+        
+        if isToday {
+            label.isBold = true
+        }
         
         label.layout <- layout
         

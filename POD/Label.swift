@@ -11,6 +11,7 @@ import Cocoa
 
 public class Label: Component {
     var label: String? = nil
+    var isBold = false
     
     public init(label: String) {
         self.label = label
@@ -21,6 +22,12 @@ public class Label: Component {
         if label != nil {
             field.stringValue = label!
         }
+        
+        if isBold {
+            // TODO: This is pretty bad way of doing things
+            field.font = NSFont.boldSystemFontOfSize(12)
+        }
+        
         field.editable = false
         field.selectable = false
         field.bordered = false

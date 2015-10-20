@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99030C7F1BD6F092002A19DA /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99030C7E1BD6F092002A19DA /* NSDate+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		99385FD51BD27F3500C677D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99385FD41BD27F3500C677D1 /* AppDelegate.swift */; };
 		99385FD71BD27F3500C677D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99385FD61BD27F3500C677D1 /* Assets.xcassets */; };
 		99385FDA1BD27F3500C677D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99385FD81BD27F3500C677D1 /* MainMenu.xib */; };
@@ -33,6 +34,7 @@
 		9997A9FD1BD2E2A000437AF9 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9FC1BD2E2A000437AF9 /* Layout.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		99D6B3FA1BD6E4B2006EBC6E /* DatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B3F91BD6E4B2006EBC6E /* DatesManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99030C7E1BD6F092002A19DA /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		99385FD11BD27F3500C677D1 /* POD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99385FD41BD27F3500C677D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99385FD61BD27F3500C677D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		9997A9FC1BD2E2A000437AF9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
+		99D6B3F91BD6E4B2006EBC6E /* DatesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99030C7D1BD6F075002A19DA /* Core Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */,
+				99C942151BD290A300D478B4 /* NSColor+Extensions.swift */,
+				99030C7E1BD6F092002A19DA /* NSDate+Extensions.swift */,
+			);
+			name = "Core Extensions";
+			sourceTree = "<group>";
+		};
 		99385FC81BD27F3500C677D1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +152,7 @@
 		99385FD31BD27F3500C677D1 /* POD */ = {
 			isa = PBXGroup;
 			children = (
+				99D6B3F81BD6E097006EBC6E /* Models */,
 				99385FE21BD27F5400C677D1 /* ComponentKit */,
 				99385FE11BD27F4F00C677D1 /* Components */,
 				99385FD41BD27F3500C677D1 /* AppDelegate.swift */,
@@ -160,6 +175,7 @@
 		99385FE21BD27F5400C677D1 /* ComponentKit */ = {
 			isa = PBXGroup;
 			children = (
+				99030C7D1BD6F075002A19DA /* Core Extensions */,
 				99385FF81BD2825F00C677D1 /* Main */,
 				99385FE91BD2815600C677D1 /* Components */,
 				99385FF71BD2824F00C677D1 /* Styling */,
@@ -198,8 +214,6 @@
 			children = (
 				99385FF51BD2824600C677D1 /* StyledView.swift */,
 				99385FEC1BD2817B00C677D1 /* StyleProps.swift */,
-				99385FF31BD2822F00C677D1 /* NSView+Extensions.swift */,
-				99C942151BD290A300D478B4 /* NSColor+Extensions.swift */,
 			);
 			name = Styling;
 			sourceTree = "<group>";
@@ -227,6 +241,14 @@
 				994CB14E1BD2BC8900EF0120 /* Info.plist */,
 			);
 			path = PODTests;
+			sourceTree = "<group>";
+		};
+		99D6B3F81BD6E097006EBC6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99D6B3F91BD6E4B2006EBC6E /* DatesManager.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99030C7F1BD6F092002A19DA /* NSDate+Extensions.swift in Sources */,
 				99385FF11BD281BD00C677D1 /* Constraint.swift in Sources */,
 				99385FEB1BD2816000C677D1 /* Button.swift in Sources */,
 				99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */,
@@ -348,6 +371,7 @@
 				9947A5FF1BD5DDC800CC7D2F /* Label.swift in Sources */,
 				99385FE41BD27F6300C677D1 /* Component.swift in Sources */,
 				99385FE61BD27F8100C677D1 /* MainComponent.swift in Sources */,
+				99D6B3FA1BD6E4B2006EBC6E /* DatesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
