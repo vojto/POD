@@ -14,9 +14,12 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
     var itemComponent: TableItem.Type?
     var items: [[AnyObject]]?
     var columnCount = 1
+    var intercellSpacing: NSSize?
     
     override func createView() -> NSView {
         let scrollView = NSScrollView.init()
+        scrollView.verticalScrollElasticity = .None
+        
         let tableView = NSTableView.init()
         
         for var i = 0; i < columnCount; i++ {
@@ -30,6 +33,12 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
         tableView.setDelegate(self)
         tableView.setDataSource(self)
         tableView.selectionHighlightStyle = .SourceList
+        
+        if intercellSpacing != nil {
+            tableView.intercellSpacing = intercellSpacing!
+        } else {
+            tableView.intercellSpacing = NSSize(width: 0, height: 0)
+        }
         
         tableView.reloadData()
         tableView.headerView = nil

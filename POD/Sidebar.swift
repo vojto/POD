@@ -22,6 +22,7 @@ class Sidebar: Component {
         calendar.style.background = NSColor.redColor()
         
         // Layout
+        table.intercellSpacing = NSSize(width: 2, height: 2)
         table.layout.top <- layout.top
         table.layout.left <- layout.left
         table.layout.right <- layout.right
@@ -39,31 +40,3 @@ class Sidebar: Component {
 
 
 
-class Calendar: Component {
-    override func render() -> [Component]? {
-        let table = Table()
-        table.layout <- layout
-        table.columnCount = 7
-        
-        table.items = DatesManager.datesForMonth()
-        
-        print("Assigning items")
-        table.itemComponent = CalendarCell.self
-        
-        return [table]
-    }
-}
-
-class CalendarCell: TableItem {
-    required init(item: AnyObject) {
-        super.init(item: item)
-        
-        self.style.background = NSColor.blueColor()
-    }
-    
-    override func render() -> [Component]? {
-        let label = Label(label: self.item as! String)
-        label.layout <- layout
-        return [label]
-    }
-}

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftDate
 
 
 // It manages all of my dates, get it?
@@ -30,6 +31,24 @@ class DatesManager {
     }
     
     static func datesForMonth() -> [[AnyObject]] {
-        return [["1", "2", "3", "4", "5", "6", "7"], ["1", "2", "3", "4", "5", "6", "7"]]
+        // Find the first day of month
+        var date = NSDate().beginningOfMonth.dateAtWeekStart() - 1.week
+        
+        var weeks: [[AnyObject]] = []
+        
+        for var i = 0; i < 5; i++ {
+            var week: [AnyObject] = []
+            for var i = 0; i < 7; i++ {
+                week.append(date)
+                date = date + 1.day
+            }
+            weeks.append(week)
+        }
+        
+        weeks.forEach {
+            print("\($0)")
+        }
+        
+        return weeks
     }
 }

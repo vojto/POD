@@ -34,6 +34,9 @@
 		9997A9FD1BD2E2A000437AF9 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A9FC1BD2E2A000437AF9 /* Layout.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942141BD28C4B00D478B4 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942131BD28C4B00D478B4 /* SplitView.swift */; settings = {ASSET_TAGS = (); }; };
 		99C942161BD290A300D478B4 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C942151BD290A300D478B4 /* NSColor+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		99CD92E91BD9444E00689F1A /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CD92E81BD9444E00689F1A /* SwiftDate.framework */; };
+		99CD92EB1BD944C000689F1A /* SwiftDate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99CD92E81BD9444E00689F1A /* SwiftDate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99CD92EE1BD947C400689F1A /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CD92ED1BD947C400689F1A /* Calendar.swift */; settings = {ASSET_TAGS = (); }; };
 		99D6B3FA1BD6E4B2006EBC6E /* DatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B3F91BD6E4B2006EBC6E /* DatesManager.swift */; settings = {ASSET_TAGS = (); }; };
 		99DD01621BD84E69009A2C40 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD01611BD84E69009A2C40 /* Sidebar.swift */; settings = {ASSET_TAGS = (); }; };
 		99DD01641BD84E8A009A2C40 /* SidebarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD01631BD84E8A009A2C40 /* SidebarItem.swift */; settings = {ASSET_TAGS = (); }; };
@@ -60,6 +63,17 @@
 				994CB1621BD2BCC200EF0120 /* Quick.framework in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CD92EC1BD944C000689F1A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99CD92EB1BD944C000689F1A /* SwiftDate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -96,6 +110,8 @@
 		9997A9FC1BD2E2A000437AF9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		99C942131BD28C4B00D478B4 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		99C942151BD290A300D478B4 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
+		99CD92E81BD9444E00689F1A /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/Mac/SwiftDate.framework; sourceTree = "<group>"; };
+		99CD92ED1BD947C400689F1A /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		99D6B3F91BD6E4B2006EBC6E /* DatesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesManager.swift; sourceTree = "<group>"; };
 		99DD01611BD84E69009A2C40 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		99DD01631BD84E8A009A2C40 /* SidebarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarItem.swift; sourceTree = "<group>"; };
@@ -106,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CD92E91BD9444E00689F1A /* SwiftDate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +151,7 @@
 		99385FC81BD27F3500C677D1 = {
 			isa = PBXGroup;
 			children = (
+				99CD92E81BD9444E00689F1A /* SwiftDate.framework */,
 				994CB15F1BD2BCC200EF0120 /* Nimble.framework */,
 				994CB1601BD2BCC200EF0120 /* Quick.framework */,
 				994CB15B1BD2BCBA00EF0120 /* Nimble.framework */,
@@ -174,6 +192,7 @@
 				99385FE51BD27F8100C677D1 /* MainComponent.swift */,
 				99DD01611BD84E69009A2C40 /* Sidebar.swift */,
 				99DD01631BD84E8A009A2C40 /* SidebarItem.swift */,
+				99CD92ED1BD947C400689F1A /* Calendar.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -267,6 +286,7 @@
 				99385FCD1BD27F3500C677D1 /* Sources */,
 				99385FCE1BD27F3500C677D1 /* Frameworks */,
 				99385FCF1BD27F3500C677D1 /* Resources */,
+				99CD92EC1BD944C000689F1A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +390,7 @@
 				9947A6011BD5DEED00CC7D2F /* TableItem.swift in Sources */,
 				99385FE81BD27F9800C677D1 /* Renderer.swift in Sources */,
 				99385FEF1BD2819200C677D1 /* Edge.swift in Sources */,
+				99CD92EE1BD947C400689F1A /* Calendar.swift in Sources */,
 				997CCED31BD2AF4E00ED786E /* Controller.swift in Sources */,
 				99385FF61BD2824600C677D1 /* StyledView.swift in Sources */,
 				9997A9F91BD2E03300437AF9 /* VisualEffectView.swift in Sources */,

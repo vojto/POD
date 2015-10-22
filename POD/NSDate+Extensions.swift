@@ -21,4 +21,5 @@ extension NSDate {
         let format = "yyyy-MM-dd"
         return self.format(format) == date.format(format)
     }
+    
 }

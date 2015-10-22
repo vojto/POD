@@ -12,6 +12,9 @@ import Cocoa
 public class Label: Component {
     var label: String? = nil
     var isBold = false
+    var font: NSFont?
+    var alignment: NSTextAlignment?
+    var color: NSColor?
     
     public init(label: String) {
         self.label = label
@@ -27,6 +30,16 @@ public class Label: Component {
             // TODO: This is pretty bad way of doing things
             field.font = NSFont.boldSystemFontOfSize(12)
         }
+        
+        if font != nil {
+            field.font = font!
+        }
+        
+        if alignment != nil {
+            field.alignment = alignment!
+        }
+        
+        field.textColor = color
         
         field.editable = false
         field.selectable = false
