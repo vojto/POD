@@ -11,20 +11,20 @@ import Cocoa
 
 class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
     
-    var numberOfRows: (() -> Int)?
-    var componentAtRow: (() -> Component)?
     var itemComponent: TableItem.Type?
-    var items: [AnyObject]?
+    var items: [[AnyObject]]?
+    var columnCount = 1
     
     override func createView() -> NSView {
         let scrollView = NSScrollView.init()
         let tableView = NSTableView.init()
         
-        let column1 = NSTableColumn.init(identifier: "column1")
+        for var i = 0; i < columnCount; i++ {
+            let column = NSTableColumn(identifier: "column\(i)")
+            column.width = 14
+            tableView.addTableColumn(column)
+        }
         
-        column1.width = 200
-
-        tableView.addTableColumn(column1)
         tableView.setDelegate(self)
         tableView.setDataSource(self)
         tableView.selectionHighlightStyle = .SourceList
@@ -40,9 +40,7 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        if let fun = numberOfRows {
-            return fun()
-        } else if let items = self.items {
+        if let items = self.items {
             return items.count
         } else {
             return 0
@@ -50,14 +48,15 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if let fun = componentAtRow {
-            return fun().build()
-        } else if let type = itemComponent {
-            let component = type.init(item: items![row])
+        
+        let columnIndex = tableView.tableColumns.indexOf(tableColumn!)!
+        
+        if let type = itemComponent {
+            let component = type.init(item: items![row][columnIndex])
             return component.build()
-        } else {
-            return nil
         }
+        
+        return nil
     }
     
     /*
