@@ -15,6 +15,7 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
     var items: [[AnyObject]]?
     var columnCount = 1
     var intercellSpacing: NSSize?
+    var canSelect = true
     
     override func createView() -> NSView {
         let scrollView = NSScrollView.init()
@@ -68,6 +69,10 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
         }
         
         return nil
+    }
+    
+    func tableView(tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        return canSelect
     }
     
     /*

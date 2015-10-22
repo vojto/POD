@@ -21,7 +21,7 @@ class MainComponent: Component {
         
         let split = SplitView()
         split.children = [sidebar, main]
-        split.setSizeRange(0, range: [150, 300])
+        split.setSizeRange(0, range: [160, 200])
         
         split.layout <- layout
         

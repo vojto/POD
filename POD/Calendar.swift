@@ -14,6 +14,7 @@ class Calendar: Component {
         let table = Table()
         table.layout <- layout
         table.columnCount = 7
+        table.canSelect = false
         
         table.items = DatesManager.datesForMonth()
         
@@ -27,7 +28,7 @@ class CalendarCell: TableItem {
     override func render() -> [Component]? {
         let date = self.item as! NSDate
         let label = Label(label: date.format("d"))
-        label.font = NSFont.systemFontOfSize(10)
+        label.font = NSFont.systemFontOfSize(11)
         label.alignment = .Center
         label.layout <- layout
         
