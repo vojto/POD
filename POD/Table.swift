@@ -21,10 +21,12 @@ class Table: Component, NSTableViewDelegate, NSTableViewDataSource {
         
         for var i = 0; i < columnCount; i++ {
             let column = NSTableColumn(identifier: "column\(i)")
-            column.width = 14
+            column.width = 1
+            column.resizingMask = .AutoresizingMask
             tableView.addTableColumn(column)
         }
         
+        tableView.columnAutoresizingStyle = .UniformColumnAutoresizingStyle
         tableView.setDelegate(self)
         tableView.setDataSource(self)
         tableView.selectionHighlightStyle = .SourceList

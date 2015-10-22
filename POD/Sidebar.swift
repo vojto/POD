@@ -44,7 +44,7 @@ class Calendar: Component {
         let table = Table()
         table.layout <- layout
         table.columnCount = 7
-        table.items = [["1", "2", "3", "4", "5", "6", "7"]]
+        table.items = [["1", "2", "3", "4", "5", "6", "7"], ["1", "2", "3", "4", "5", "6", "7"]]
         print("Assigning items")
         table.itemComponent = CalendarCell.self
         
